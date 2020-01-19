@@ -20,4 +20,15 @@ class Show < ActiveRecord::Base
     self.minimum(:rating)
   end
 
+
+  def self.least_popular_show
+    least_popular_show = nil
+    Show.all.map do |s|
+      if s.rating == Show.lowest_rating
+        least_popular_show = s
+      end
+    end
+    least_popular_show
+  end
+
 end
