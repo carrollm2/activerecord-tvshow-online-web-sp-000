@@ -11,7 +11,7 @@ class Show < ActiveRecord::Base
         most_popular_show = s
       end
     end
-    s
+    most_popular_show
   end
 
 end
