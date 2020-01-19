@@ -8,9 +8,8 @@ class Show < ActiveRecord::Base
   def self.most_popular_show
     most_popular_show_name = ""
     Show.all.map do |s|
-      binding.pry
       if s.rating == Show.highest_rating
-        most_popluar_show_name = s
+        most_popluar_show_name = s.name
       end
     end
     most_popular_show.name
