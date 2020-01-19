@@ -43,7 +43,6 @@ class Show < ActiveRecord::Base
 
     Song.where("rating > ?", 5)
 
-
   end
 
 
