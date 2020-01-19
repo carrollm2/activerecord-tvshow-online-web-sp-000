@@ -31,4 +31,11 @@ class Show < ActiveRecord::Base
     least_popular_show
   end
 
+
+  def self.ratings_sum
+
+    Show.sum(:rating)
+
+  end
+
 end
